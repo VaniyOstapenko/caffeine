@@ -10,6 +10,8 @@ import beans from "./assets/beans.svg";
 import badge from "./assets/badge.svg";
 import cup from "./assets/cup.svg";
 import price from "./assets/price.svg";
+import group from "./assets/group.svg";
+import cup2 from "./assets/cup2.svg";
 
 const coffies = [
   {
@@ -307,6 +309,47 @@ const Differences = styled.div`
   }
 `;
 
+const Morning = styled.div`
+  .content {
+    background-image: url(${group});
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    .mainItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1220px;
+      height: 574px;
+      margin: auto;
+      padding: 150px 0;
+      margin-top: 80px;
+
+      .item1 {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 574px;
+        h2 {
+          font: 700 54px "Playfair Display";
+          color: #ffffff;
+          width: 580px;
+        }
+        p {
+          font: 400 20px "Playfair Display";
+          color: #ffffff;
+          width: 500px;
+        }
+      }
+      .item2 {
+        margin-top: 70px;
+      }
+    }
+  }
+`;
+
 const App = () => {
   return (
     <>
@@ -390,6 +433,24 @@ const App = () => {
         <h3>Get started today.</h3>
         <Button4>Join Us</Button4>
       </Differences>
+
+      <Morning>
+        <div className="content">
+          <div className="mainItem">
+            <div className="item1">
+              <h2>Get a chance to have an Amazing morning</h2>
+              <p>
+                We are giving you are one time opportunity to experience a
+                better life with coffee.
+              </p>
+              <Button2>Order Now</Button2>
+            </div>
+            <div className="item2">
+              <img src={cup2} alt="coffee"></img>
+            </div>
+          </div>
+        </div>
+      </Morning>
     </>
   );
 };
