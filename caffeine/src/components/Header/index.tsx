@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 0;
+  padding: 1% 0;
   margin: auto;
 
   h1 {

@@ -12,6 +12,7 @@ import cup from "./assets/cup.svg";
 import price from "./assets/price.svg";
 import group from "./assets/group.svg";
 import cup2 from "./assets/cup2.svg";
+import Footer from "./components/Footer";
 
 const coffies = [
   {
@@ -96,9 +97,9 @@ const BackgroundPreview = styled.div`
   .landing {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 6% 0;
     max-width: 1220px;
 
     p {
@@ -115,10 +116,12 @@ const BackgroundPreview = styled.div`
     }
   }
 `;
+
 const BlockInfo = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1220px;
+  height: 650px;
   margin: auto;
   padding: 150px 0;
   gap: 90px;
@@ -138,6 +141,7 @@ const BlockInfo = styled.div`
     font: 400 20px "Playfair Display";
   }
 `;
+
 const Menu = styled.div`
   max-width: 1220px;
   margin: auto;
@@ -343,11 +347,23 @@ const Morning = styled.div`
           width: 500px;
         }
       }
+
       .item2 {
         margin-top: 70px;
       }
     }
   }
+`;
+
+const Feedback = styled.div`
+  max-width: 1220px;
+  margin: auto;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 const App = () => {
@@ -451,6 +467,12 @@ const App = () => {
           </div>
         </div>
       </Morning>
+
+      <Feedback>
+        <div className="content"></div>
+      </Feedback>
+
+      <Footer />
     </>
   );
 };
