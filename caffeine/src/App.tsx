@@ -1,6 +1,18 @@
-import styled, { createGlobalStyle } from "styled-components";
+import {
+  Global,
+  BackgroundPreview,
+  Menu,
+  BlockInfo,
+  Button1,
+  Button2,
+  Button3,
+  Button4,
+  Differences,
+  Morning,
+  Feedback,
+  EndContent,
+} from "./style";
 import Header from "./components/Header";
-import img from "./assets/coffeeimage.svg";
 import coffee from "./assets/stylized-cup-coffee-out-coffee-beans-flat-lay 1.svg";
 import coffeeMenu1 from "./assets/coffeeMenu1.svg";
 import coffeeMenu2 from "./assets/coffeeMenu2.svg";
@@ -10,8 +22,13 @@ import beans from "./assets/beans.svg";
 import badge from "./assets/badge.svg";
 import cup from "./assets/cup.svg";
 import price from "./assets/price.svg";
-import group from "./assets/group.svg";
 import cup2 from "./assets/cup2.svg";
+import grains from "./assets/grains.svg";
+import stick from "./assets/stick.svg";
+import rectangel from "./assets/Rectangle.svg";
+import vector1 from "./assets/Vector1.svg";
+import vector2 from "./assets/Vector2.svg";
+import endImage from "./assets/endImage.svg";
 import Footer from "./components/Footer";
 
 const coffies = [
@@ -71,300 +88,6 @@ const ourDifferences = [
     paragraph: "Our Coffee prices are easy to afford",
   },
 ];
-
-const Global = createGlobalStyle`
- *{
-   margin: 0;
-   padding: 0; 
-   box-sizing: border-box;
-   font-style: normal;
-   color: #707070;
-   font: 400 20px 'Playfair Display';
- }
-
-  a {
-    text-decoration: none;
-  }
-`;
-
-const BackgroundPreview = styled.div`
-  background-image: url(${img});
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-
-  .landing {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0 auto;
-    padding: 6% 0;
-    max-width: 1220px;
-
-    p {
-      font: 500 22px "Playfair Display";
-      color: #ffffff;
-      max-width: 527px;
-    }
-
-    h1 {
-      font: 400 220px "Clicker Script";
-      line-height: 290.58px;
-      color: #ffffff;
-      max-width: 527px;
-    }
-  }
-`;
-
-const BlockInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 1220px;
-  height: 650px;
-  margin: auto;
-  padding: 150px 0;
-  gap: 90px;
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 29px;
-  }
-
-  h2 {
-    font: 700 54px "Playfair Display";
-    color: #603809;
-  }
-
-  p {
-    font: 400 20px "Playfair Display";
-  }
-`;
-
-const Menu = styled.div`
-  max-width: 1220px;
-  margin: auto;
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-
-  h2 {
-    font: 700 54px "Playfair Display";
-    color: #603809;
-  }
-
-  p {
-    font: 400 20px "Playfair Display";
-    color: #603809;
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    gap: 30px;
-    flex-wrap: wrap;
-
-    .item {
-      background-color: #fff9f1;
-      border: 1px solid #f9c06a;
-      max-width: 280px;
-
-      .itemInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 14px 0 42px;
-
-        h3 {
-          font: 600 22px "Playfair Display";
-          color: #603809;
-        }
-
-        p {
-          font: 400 16px "Playfair Display";
-          color: #1e1e1e;
-        }
-
-        .price {
-          font: 700 18px "Playfair Display";
-          color: #603809;
-        }
-      }
-    }
-  }
-`;
-
-const Button1 = styled.button`
-  display: block;
-  border: none;
-  background: #f9c06a;
-  padding: 14px 27px;
-  border-radius: 24px;
-  color: #1e1e1e;
-  max-width: 155px;
-  font: 700 16px "Playfair Display";
-  cursor: pointer;
-  position: absolute;
-  margin-top: 460px;
-`;
-
-const Button2 = styled.button`
-  display: block;
-  border: none;
-  background: #f9c06a;
-  padding: 14px 27px;
-  border-radius: 24px;
-  color: #1e1e1e;
-  max-width: 155px;
-  font: 700 16px "Playfair Display";
-  cursor: pointer;
-  position: absolute;
-  margin-top: 270px;
-`;
-
-const Button3 = styled.button`
-  display: block;
-  border: none;
-  background: #f9c06a;
-  padding: 14px 27px;
-  border-radius: 24px;
-  color: #1e1e1e;
-  max-width: 155px;
-  font: 700 16px "Playfair Display";
-  cursor: pointer;
-  position: absolute;
-  margin-top: 110px;
-`;
-
-const Button4 = styled.button`
-  display: block;
-  border: none;
-  background: #f9c06a;
-  padding: 14px 27px;
-  border-radius: 24px;
-  color: #1e1e1e;
-  max-width: 155px;
-  font: 700 16px "Playfair Display";
-  cursor: pointer;
-  position: absolute;
-  margin-top: 620px;
-`;
-
-const Differences = styled.div`
-  max-width: 1220px;
-  margin: auto;
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-
-  h2 {
-    font: 700 54px "Playfair Display";
-    color: #603809;
-  }
-
-  p {
-    font: 400 15px "Playfair Display";
-    color: #1e1e1e;
-    width: 176px;
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    .item {
-      background-color: #fff9f1;
-      border: 1px solid #f9c06a;
-      width: 280px;
-      height: 284px;
-      padding: 25px;
-      text-align: center;
-
-      .itemInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 14px 0 42px;
-      }
-    }
-  }
-  .downP {
-    font: 400 15px "Playfair Display";
-    color: #603809;
-    width: 800px;
-    text-align: center;
-  }
-
-  h3 {
-    font: 700 30px "Playfair Display";
-    color: #603809;
-  }
-`;
-
-const Morning = styled.div`
-  .content {
-    background-image: url(${group});
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-
-    .mainItem {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1220px;
-      height: 574px;
-      margin: auto;
-      padding: 150px 0;
-      margin-top: 80px;
-
-      .item1 {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        width: 574px;
-        h2 {
-          font: 700 54px "Playfair Display";
-          color: #ffffff;
-          width: 580px;
-        }
-        p {
-          font: 400 20px "Playfair Display";
-          color: #ffffff;
-          width: 500px;
-        }
-      }
-
-      .item2 {
-        margin-top: 70px;
-      }
-    }
-  }
-`;
-
-const Feedback = styled.div`
-  max-width: 1220px;
-  margin: auto;
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-`;
 
 const App = () => {
   return (
@@ -464,13 +187,50 @@ const App = () => {
             <div className="item2">
               <img src={cup2} alt="coffee"></img>
             </div>
+            <div className="item3">
+              <img src={grains} alt="coffee"></img>
+            </div>
           </div>
         </div>
       </Morning>
 
       <Feedback>
-        <div className="content"></div>
+        <div className="content">
+          <div className="startItem">
+            <h2>Our coffee perfection feedback</h2>
+            <p>Our customers has amazing things to say about us</p>
+          </div>
+          <div className="mainText">
+            <div className="person">
+              <img src={stick} alt="coffe"></img>
+            </div>
+            <div className="vectorOne">
+              <img src={vector1} alt="coffee"></img>
+            </div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset.....
+            </p>
+            <h3>Jonny Thomas</h3>
+            <p className="profession">Project Manager</p>
+            <div className="man">
+              <img src={rectangel} alt="coffee"></img>
+            </div>
+            <div className="vectorTwo">
+              <img src={vector2} alt="coffee"></img>
+            </div>
+          </div>
+        </div>
       </Feedback>
+
+      <EndContent>
+        <img src={endImage} alt="coffee"></img>
+      </EndContent>
 
       <Footer />
     </>

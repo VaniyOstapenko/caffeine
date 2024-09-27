@@ -2,7 +2,7 @@ import styled from "styled-components";
 import imgFooter from "../../assets/imgFooter.svg";
 import Facebook from "../../assets/Facebook.svg";
 import Instagram from "../../assets/Intagram.svg";
-import Youtubr from "../../assets/Youtube.svg";
+import Youtube from "../../assets/Youtube.svg";
 import Twitter from "../../assets/Twitter.svg";
 
 const FooterContent = styled.div`
@@ -34,6 +34,10 @@ const FooterContent = styled.div`
         width: 400px;
         line-height: 25px;
         color: #ffff;
+      }
+      .social {
+        display: flex;
+        gap: 20px;
       }
     }
 
@@ -80,11 +84,11 @@ const Footer = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <div>
-              <img src="Facebook" alt="coffee"></img>
-              <img src="Instagram" alt="coffee"></img>
-              <img src="Youtube" alt="coffee"></img>
-              <img src="Twitter" alt="coffee"></img>
+            <div className="social">
+              <img src={Facebook} alt="coffee"></img>
+              <img src={Instagram} alt="coffee"></img>
+              <img src={Youtube} alt="coffee"></img>
+              <img src={Twitter} alt="coffee"></img>
             </div>
           </div>
           <div className="about">
