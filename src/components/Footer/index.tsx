@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import imgFooter from "../../assets/imgFooter.svg";
-import Facebook from "../../assets/Facebook.svg";
-import Instagram from "../../assets/Intagram.svg";
-import Youtube from "../../assets/Youtube.svg";
-import Twitter from "../../assets/Twitter.svg";
+import styled from 'styled-components';
+import imgFooter from '../../assets/imgFooter.svg';
+import Facebook from '../../assets/Facebook.svg';
+import Instagram from '../../assets/Intagram.svg';
+import Youtube from '../../assets/Youtube.svg';
+import Twitter from '../../assets/Twitter.svg';
 
 const FooterContent = styled.div`
   background-image: url(${imgFooter});
@@ -27,7 +27,7 @@ const FooterContent = styled.div`
       flex-direction: column;
       gap: 40px;
       h3 {
-        font: 400 54px "Clicker Script";
+        font: 400 54px 'Clicker Script';
         color: #ffff;
       }
       p {
@@ -38,6 +38,12 @@ const FooterContent = styled.div`
       .social {
         display: flex;
         gap: 20px;
+        .Facebook {
+          transition: filter 0.3s ease;
+          &:hover {
+            filter: sepia(100%) hue-rotate(180deg);
+          }
+        }
       }
     }
 
@@ -48,11 +54,11 @@ const FooterContent = styled.div`
       flex-direction: column;
       gap: 30px;
       h3 {
-        font: 700 26px "Playfair Display";
+        font: 700 26px 'Playfair Display';
         color: #ffff;
       }
       p {
-        font: 400 16px "Playfair Display";
+        font: 400 16px 'Playfair Display';
         color: #ffff;
       }
     }
@@ -79,16 +85,14 @@ const Footer = () => {
           <div className="beanScene">
             <h3>Bean Scene</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             <div className="social">
-              <img src={Facebook} alt="coffee"></img>
-              <img src={Instagram} alt="coffee"></img>
-              <img src={Youtube} alt="coffee"></img>
-              <img src={Twitter} alt="coffee"></img>
+              <img className="Facebook" src={Facebook} alt="coffee"></img>
+              <img className="Instagram" src={Instagram} alt="coffee"></img>
+              <img className="Youtube" src={Youtube} alt="coffee"></img>
+              <img className="Twitter" src={Twitter} alt="coffee"></img>
             </div>
           </div>
           <div className="about">
@@ -107,10 +111,7 @@ const Footer = () => {
           </div>
           <div className="contactUs">
             <h3>Contact Us</h3>
-            <p>
-              Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
-              Bangalore-560016
-            </p>
+            <p>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</p>
             <p>+1 202-918-2132</p>
             <p>beanscene@mail.com</p>
             <p>www.beanscene.com</p>

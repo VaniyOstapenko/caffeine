@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
-import img from "./assets/coffeeimage.svg";
-import group from "./assets/group.svg";
+import styled, { createGlobalStyle } from 'styled-components';
+import img from './assets/coffeeimage.svg';
+import group from './assets/group.svg';
 
 const Global = createGlobalStyle`
  *{
@@ -33,13 +33,13 @@ const BackgroundPreview = styled.div`
     max-width: 1220px;
 
     p {
-      font: 500 22px "Playfair Display";
+      font: 500 22px 'Playfair Display';
       color: #ffffff;
       max-width: 527px;
     }
 
     h1 {
-      font: 400 220px "Clicker Script";
+      font: 400 220px 'Clicker Script';
       line-height: 290.58px;
       color: #ffffff;
       max-width: 527px;
@@ -63,12 +63,12 @@ const BlockInfo = styled.div`
   }
 
   h2 {
-    font: 700 54px "Playfair Display";
+    font: 700 54px 'Playfair Display';
     color: #603809;
   }
 
   p {
-    font: 400 20px "Playfair Display";
+    font: 400 20px 'Playfair Display';
   }
 `;
 
@@ -83,12 +83,12 @@ const Menu = styled.div`
   gap: 20px;
 
   h2 {
-    font: 700 54px "Playfair Display";
+    font: 700 54px 'Playfair Display';
     color: #603809;
   }
 
   p {
-    font: 400 20px "Playfair Display";
+    font: 400 20px 'Playfair Display';
     color: #603809;
   }
 
@@ -104,6 +104,11 @@ const Menu = styled.div`
       background-color: #fff9f1;
       border: 1px solid #f9c06a;
       max-width: 280px;
+      transition: transform 0.3s ease;
+      &:hover {
+        background-color: #ffeed8;
+        transform: scale(105%);
+      }
 
       .itemInfo {
         display: flex;
@@ -113,17 +118,17 @@ const Menu = styled.div`
         padding: 14px 0 42px;
 
         h3 {
-          font: 600 22px "Playfair Display";
+          font: 600 22px 'Playfair Display';
           color: #603809;
         }
 
         p {
-          font: 400 16px "Playfair Display";
+          font: 400 16px 'Playfair Display';
           color: #1e1e1e;
         }
 
         .price {
-          font: 700 18px "Playfair Display";
+          font: 700 18px 'Playfair Display';
           color: #603809;
         }
       }
@@ -139,7 +144,7 @@ const Button1 = styled.button`
   border-radius: 24px;
   color: #1e1e1e;
   max-width: 155px;
-  font: 700 16px "Playfair Display";
+  font: 700 16px 'Playfair Display';
   cursor: pointer;
   position: absolute;
   margin-top: 460px;
@@ -153,7 +158,7 @@ const Button2 = styled.button`
   border-radius: 24px;
   color: #1e1e1e;
   max-width: 155px;
-  font: 700 16px "Playfair Display";
+  font: 700 16px 'Playfair Display';
   cursor: pointer;
   position: absolute;
   margin-top: 270px;
@@ -167,7 +172,7 @@ const Button3 = styled.button`
   border-radius: 24px;
   color: #1e1e1e;
   max-width: 155px;
-  font: 700 16px "Playfair Display";
+  font: 700 16px 'Playfair Display';
   cursor: pointer;
   position: absolute;
   margin-top: 110px;
@@ -181,7 +186,7 @@ const Button4 = styled.button`
   border-radius: 24px;
   color: #1e1e1e;
   max-width: 155px;
-  font: 700 16px "Playfair Display";
+  font: 700 16px 'Playfair Display';
   cursor: pointer;
   position: absolute;
   margin-top: 620px;
@@ -198,12 +203,12 @@ const Differences = styled.div`
   gap: 20px;
 
   h2 {
-    font: 700 54px "Playfair Display";
+    font: 700 54px 'Playfair Display';
     color: #603809;
   }
 
   p {
-    font: 400 15px "Playfair Display";
+    font: 400 15px 'Playfair Display';
     color: #1e1e1e;
     width: 176px;
   }
@@ -220,6 +225,11 @@ const Differences = styled.div`
       height: 284px;
       padding: 25px;
       text-align: center;
+      transition: transform 0.3s ease;
+      &:hover {
+        background-color: #ffeed8;
+        transform: scale(105%);
+      }
 
       .itemInfo {
         display: flex;
@@ -231,14 +241,14 @@ const Differences = styled.div`
     }
   }
   .downP {
-    font: 400 15px "Playfair Display";
+    font: 400 15px 'Playfair Display';
     color: #603809;
     width: 800px;
     text-align: center;
   }
 
   h3 {
-    font: 700 30px "Playfair Display";
+    font: 700 30px 'Playfair Display';
     color: #603809;
   }
 `;
@@ -267,12 +277,12 @@ const Morning = styled.div`
         gap: 25px;
         width: 574px;
         h2 {
-          font: 700 54px "Playfair Display";
+          font: 700 54px 'Playfair Display';
           color: #ffffff;
           width: 580px;
         }
         p {
-          font: 400 20px "Playfair Display";
+          font: 400 20px 'Playfair Display';
           color: #ffffff;
           width: 500px;
         }
@@ -309,13 +319,13 @@ const Feedback = styled.div`
     gap: 16px;
     margin-bottom: 34px;
     h2 {
-      font: 700 54px "Playfair Display";
+      font: 700 54px 'Playfair Display';
       color: #603809;
       width: 770px;
     }
 
     p {
-      font: 400 20px "Playfair Display";
+      font: 400 20px 'Playfair Display';
       color: #707070;
       width: 500px;
     }
@@ -349,19 +359,19 @@ const Feedback = styled.div`
     }
 
     p {
-      font: 600 18px "Playfair Display";
+      font: 600 18px 'Playfair Display';
       line-height: 36px;
       text-align: center;
     }
 
     h3 {
-      font: 700 32px "Playfair Display";
+      font: 700 32px 'Playfair Display';
       color: #603809;
       margin-top: 20px;
     }
 
     .profession {
-      font: 400 20px "Playfair Display";
+      font: 400 20px 'Playfair Display';
       color: #707070;
       margin-top: 10px;
     }
@@ -393,17 +403,4 @@ const EndContent = styled.div`
   }
 `;
 
-export {
-  Global,
-  BackgroundPreview,
-  Menu,
-  BlockInfo,
-  Button1,
-  Button2,
-  Button3,
-  Button4,
-  Differences,
-  Morning,
-  Feedback,
-  EndContent,
-};
+export { Global, BackgroundPreview, Menu, BlockInfo, Button1, Button2, Button3, Button4, Differences, Morning, Feedback, EndContent };

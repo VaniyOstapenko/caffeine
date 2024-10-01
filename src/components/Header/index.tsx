@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   max-width: 1220px;
@@ -9,15 +9,19 @@ const Wrapper = styled.div`
   margin: auto;
 
   h1 {
-    font: 400 35px "Clicker Script";
+    font: 400 35px 'Clicker Script';
     color: #ffffff;
   }
 
   .btn_signIn {
     color: #ffffff;
-    font: 400 20px "Playfair Display";
-    text-decoration: underline;
+    font: 400 20px 'Playfair Display';
     margin-top: 15px;
+    transition: text-decoration 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   .btn_active {
@@ -44,14 +48,14 @@ const Wrapper = styled.div`
 `;
 
 const Header = () => {
-  const nav: string[] = ["Home", "Menu", "About Us", "Contact Us"];
+  const nav: string[] = ['Home', 'Menu', 'About Us', 'Contact Us'];
 
   return (
     <>
       <Wrapper>
         <h1>Caffeine</h1>
         <div className="navigation">
-          {nav.map((el) => (
+          {nav.map(el => (
             <p key={el}>{el}</p>
           ))}
         </div>
