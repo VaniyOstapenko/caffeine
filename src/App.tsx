@@ -18,6 +18,7 @@ import vector2 from './assets/Vector2.svg';
 import endImage from './assets/endImage.svg';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const coffies = [
   {
@@ -131,7 +132,7 @@ const App = () => {
 
       <BackgroundPreview>
         <Header />
-        <div className="landing">
+        <motion.div initial={{ filter: 'blur(10px)' }} transition={{ duration: 2 }} animate={{ filter: 'blur(0px)' }} className="landing">
           <p>We’ve got your morning covered with</p>
           <h1>Coffee</h1>
           <p>
@@ -139,7 +140,7 @@ const App = () => {
             customers.
           </p>
           <Button1>Order Now</Button1>
-        </div>
+        </motion.div>
       </BackgroundPreview>
 
       <BlockInfo>

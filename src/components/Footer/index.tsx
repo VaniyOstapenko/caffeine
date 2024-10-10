@@ -1,81 +1,8 @@
-import styled from 'styled-components';
-import imgFooter from '../../assets/imgFooter.svg';
+import { FooterContent } from '../../style';
 import Facebook from '../../assets/Facebook.svg';
 import Instagram from '../../assets/Intagram.svg';
 import Youtube from '../../assets/Youtube.svg';
 import Twitter from '../../assets/Twitter.svg';
-
-const FooterContent = styled.div`
-  background-image: url(${imgFooter});
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  .content {
-    height: 698px;
-    max-width: 1220px;
-    height: 500px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0;
-    margin: auto;
-    gap: 66px;
-
-    .beanScene {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      h3 {
-        font: 400 54px 'Clicker Script';
-        color: #ffff;
-      }
-      p {
-        width: 400px;
-        line-height: 25px;
-        color: #ffff;
-      }
-      .social {
-        display: flex;
-        gap: 20px;
-        .Facebook {
-          transition: filter 0.3s ease;
-          &:hover {
-            filter: sepia(100%) hue-rotate(180deg);
-          }
-        }
-      }
-    }
-
-    .about,
-    .company,
-    .contactUs {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      h3 {
-        font: 700 26px 'Playfair Display';
-        color: #ffff;
-      }
-      p {
-        font: 400 16px 'Playfair Display';
-        color: #ffff;
-      }
-    }
-
-    .company {
-      display: flex;
-      flex-direction: column;
-      gap: 35px;
-    }
-
-    .contactUs {
-      display: flex;
-      flex-direction: column;
-      gap: 35px;
-    }
-  }
-`;
 
 const Footer = () => {
   return (

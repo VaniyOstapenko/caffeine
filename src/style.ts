@@ -1,6 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import img from './assets/coffeeimage.svg';
 import group from './assets/group.svg';
+import imgFooter from './assets/imgFooter.svg';
+import { motion } from 'framer-motion';
 
 const Global = createGlobalStyle`
  *{
@@ -17,7 +19,49 @@ const Global = createGlobalStyle`
   }
 `;
 
-const BackgroundPreview = styled.div`
+const Wrapper = styled(motion.div)`
+  max-width: 1220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  margin: auto;
+
+  h1 {
+    font: 400 35px 'Clicker Script';
+    color: #ffffff;
+  }
+
+  .btn_signIn {
+    color: #ffffff;
+    font: 400 20px 'Playfair Display';
+    margin-top: 15px;
+  }
+
+  .btn_active {
+    background: #f9c06a;
+    padding: 14px 27px;
+    border-radius: 24px;
+    color: #1e1e1e;
+  }
+  .container {
+    display: flex;
+    gap: 35px;
+  }
+  .navigation {
+    display: flex;
+    gap: 60px;
+    p {
+      color: #ffffff;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 60px;
+  }
+`;
+
+const BackgroundPreview = styled(motion.div)`
   background-image: url(${img});
   width: 100%;
   height: 100%;
@@ -403,4 +447,85 @@ const EndContent = styled.div`
   }
 `;
 
-export { Global, BackgroundPreview, Menu, BlockInfo, Button1, Button2, Button3, Button4, Differences, Morning, Feedback, EndContent };
+const FooterContent = styled.div`
+  background-image: url(${imgFooter});
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  .content {
+    height: 698px;
+    max-width: 1220px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0;
+    margin: auto;
+    gap: 66px;
+
+    .beanScene {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      h3 {
+        font: 400 54px 'Clicker Script';
+        color: #ffff;
+      }
+      p {
+        width: 400px;
+        line-height: 25px;
+        color: #ffff;
+      }
+      .social {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    .about,
+    .company,
+    .contactUs {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h3 {
+        font: 700 26px 'Playfair Display';
+        color: #ffff;
+      }
+      p {
+        font: 400 16px 'Playfair Display';
+        color: #ffff;
+      }
+    }
+
+    .company {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .contactUs {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+`;
+
+export {
+  Global,
+  Wrapper,
+  BackgroundPreview,
+  Menu,
+  BlockInfo,
+  Button1,
+  Button2,
+  Button3,
+  Button4,
+  Differences,
+  Morning,
+  Feedback,
+  EndContent,
+  FooterContent,
+};

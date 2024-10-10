@@ -1,67 +1,27 @@
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  max-width: 1220px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 0;
-  margin: auto;
-
-  h1 {
-    font: 400 35px 'Clicker Script';
-    color: #ffffff;
-  }
-
-  .btn_signIn {
-    color: #ffffff;
-    font: 400 20px 'Playfair Display';
-    margin-top: 15px;
-    transition: text-decoration 0.5s ease;
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  }
-
-  .btn_active {
-    background: #f9c06a;
-    padding: 14px 27px;
-    border-radius: 24px;
-    color: #1e1e1e;
-  }
-  .container {
-    display: flex;
-    gap: 35px;
-  }
-  .navigation {
-    display: flex;
-    gap: 60px;
-    p {
-      color: #ffffff;
-    }
-  }
-  ul {
-    display: flex;
-    gap: 60px;
-  }
-`;
+import { Wrapper } from '../../style';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const nav: string[] = ['Home', 'Menu', 'About Us', 'Contact Us'];
 
   return (
     <>
-      <Wrapper>
+      <Wrapper initial={{ filter: 'blur(10px)' }} transition={{ duration: 2 }} animate={{ filter: 'blur(0px)' }}>
         <h1>Caffeine</h1>
         <div className="navigation">
           {nav.map(el => (
-            <p key={el}>{el}</p>
+            <motion.p whileHover={{ scale: 1.1, color: ' #f9c06a', cursor: 'pointer' }} whileTap={{ color: '#cd9d55', scale: 1 }} key={el}>
+              {el}
+            </motion.p>
           ))}
         </div>
         <div className="container">
-          <p className="btn_signIn">Sign In</p>
-          <button className="btn_active">Sign Up</button>
+          <motion.p whileHover={{ scale: 1.1, cursor: 'pointer', textDecoration: 'underline' }} whileTap={{ scale: 1 }} className="btn_signIn">
+            Sign In
+          </motion.p>
+          <motion.button whileHover={{ scale: 1.1, cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }} className="btn_active">
+            Sign Up
+          </motion.button>
         </div>
       </Wrapper>
     </>
