@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <>
-      <Wrapper initial={{ filter: 'blur(10px)' }} transition={{ duration: 2 }} animate={{ filter: 'blur(0px)' }}>
+      <Wrapper>
         <h1>Caffeine</h1>
         <div className="navigation">
           {nav.map(el => (

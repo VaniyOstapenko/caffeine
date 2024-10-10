@@ -3,11 +3,12 @@ import Facebook from '../../assets/Facebook.svg';
 import Instagram from '../../assets/Intagram.svg';
 import Youtube from '../../assets/Youtube.svg';
 import Twitter from '../../assets/Twitter.svg';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <>
-      <FooterContent>
+      <FooterContent initial={{ filter: 'grayscale(100%)' }} transition={{ duration: 3 }} animate={{ filter: 'grayscale(0%)' }}>
         <div className="content">
           <div className="beanScene">
             <h3>Bean Scene</h3>
@@ -16,10 +17,34 @@ const Footer = () => {
               since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             <div className="social">
-              <img className="Facebook" src={Facebook} alt="coffee"></img>
-              <img className="Instagram" src={Instagram} alt="coffee"></img>
-              <img className="Youtube" src={Youtube} alt="coffee"></img>
-              <img className="Twitter" src={Twitter} alt="coffee"></img>
+              <motion.img
+                whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
+                whileTap={{ scale: 0.9 }}
+                className="Facebook"
+                src={Facebook}
+                alt="coffee"
+              ></motion.img>
+              <motion.img
+                whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
+                whileTap={{ scale: 0.9 }}
+                className="Instagram"
+                src={Instagram}
+                alt="coffee"
+              ></motion.img>
+              <motion.img
+                whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
+                whileTap={{ scale: 0.9 }}
+                className="Youtube"
+                src={Youtube}
+                alt="coffee"
+              ></motion.img>
+              <motion.img
+                whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
+                whileTap={{ scale: 0.9 }}
+                className="Twitter"
+                src={Twitter}
+                alt="coffee"
+              ></motion.img>
             </div>
           </div>
           <div className="about">

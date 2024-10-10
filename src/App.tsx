@@ -18,7 +18,7 @@ import vector2 from './assets/Vector2.svg';
 import endImage from './assets/endImage.svg';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 const coffies = [
   {
@@ -130,20 +130,27 @@ const App = () => {
     <>
       <Global />
 
-      <BackgroundPreview>
+      <BackgroundPreview initial={{ filter: 'grayscale(100%)' }} transition={{ duration: 3, ease: 'linear' }} animate={{ filter: 'grayscale(0%)' }}>
         <Header />
-        <motion.div initial={{ filter: 'blur(10px)' }} transition={{ duration: 2 }} animate={{ filter: 'blur(0px)' }} className="landing">
+        <div className="landing">
           <p>We’ve got your morning covered with</p>
           <h1>Coffee</h1>
           <p>
             It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our
             customers.
           </p>
-          <Button1>Order Now</Button1>
-        </motion.div>
+          <Button1 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+            Order Now
+          </Button1>
+        </div>
       </BackgroundPreview>
 
-      <BlockInfo>
+      <BlockInfo
+        initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+        whileHover={{ opacity: 1, scale: 1.05 }}
+        transition={{ duration: 3, ease: 'linear' }}
+        animate={{ filter: 'grayscale(0%)' }}
+      >
         <div className="content">
           <h2>Discover the best coffee</h2>
           <p>
@@ -151,14 +158,21 @@ const App = () => {
             cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you
             have ever tasted.
           </p>
-          <Button2>Learn More</Button2>
+          <Button2 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+            Learn More
+          </Button2>
         </div>
         <div>
           <img src={coffee} alt="coffee" />
         </div>
       </BlockInfo>
 
-      <Menu>
+      <Menu
+        initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+        whileHover={{ opacity: 1, scale: 1.05 }}
+        transition={{ duration: 3, ease: 'linear' }}
+        animate={{ filter: 'grayscale(0%)' }}
+      >
         <h2>Enjoy a new blend of coffee style</h2>
         <p>Explore all flavours of coffee with us. There is always a new cup worth experiencing.</p>
         <div className="content">
@@ -172,7 +186,9 @@ const App = () => {
                   <h3>{el.title}</h3>
                   <p>{el.description}</p>
                   <p className="price">{el.price}</p>
-                  <Button3>Order Now</Button3>
+                  <Button3 whileHover={{ backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 0.9 }}>
+                    Order Now
+                  </Button3>
                 </div>
               </div>
             </div>
@@ -180,7 +196,12 @@ const App = () => {
         </div>
       </Menu>
 
-      <Differences>
+      <Differences
+        initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+        whileHover={{ opacity: 1, scale: 1.05 }}
+        transition={{ duration: 3, ease: 'linear' }}
+        animate={{ filter: 'grayscale(0%)' }}
+      >
         <h2>Why are we different?</h2>
         <p>We don’t just make your coffee, we make your day!</p>
         <div className="content">
@@ -198,16 +219,23 @@ const App = () => {
         </div>
         <p className="downP">Great ideas start with great coffee, Lets help you achieve that</p>
         <h3>Get started today.</h3>
-        <Button4>Join Us</Button4>
+        <Button4 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+          Join Us
+        </Button4>
       </Differences>
 
-      <Morning>
+      <Morning initial={{ filter: 'grayscale(100%)' }} transition={{ duration: 3, ease: 'linear' }} animate={{ filter: 'grayscale(0%)' }}>
         <div className="content">
           <div className="mainItem">
             <div className="item1">
               <h2>Get a chance to have an Amazing morning</h2>
               <p>We are giving you are one time opportunity to experience a better life with coffee.</p>
-              <Button2>Order Now</Button2>
+              <Button2
+                whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
+                whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+              >
+                Order Now
+              </Button2>
             </div>
             <div className="item2">
               <img src={cup2} alt="coffee"></img>
@@ -219,7 +247,12 @@ const App = () => {
         </div>
       </Morning>
 
-      <Feedback>
+      <Feedback
+        initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+        whileHover={{ opacity: 1, scale: 1.05 }}
+        transition={{ duration: 3, ease: 'linear' }}
+        animate={{ filter: 'grayscale(0%)' }}
+      >
         <div className="content">
           <div className="startItem">
             <h2>Our coffee perfection feedback</h2>
@@ -229,23 +262,33 @@ const App = () => {
             <div className="person">
               <img src={stick} alt="coffe"></img>
             </div>
-            <div className="vectorOne" onClick={() => nextSlider()}>
+            <motion.div
+              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
+              whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+              className="vectorOne"
+              onClick={() => nextSlider()}
+            >
               <img src={vector1} alt="coffee"></img>
-            </div>
+            </motion.div>
             <p>{sliderObj[count].description}</p>
             <h3>{sliderObj[count].name}</h3>
             <p className="profession">{sliderObj[count].profession}</p>
             <div className="man">
               <img src={rectangel} alt="coffee"></img>
             </div>
-            <div className="vectorTwo" onClick={() => lastSlider()}>
+            <motion.div
+              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
+              whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+              className="vectorTwo"
+              onClick={() => lastSlider()}
+            >
               <img src={vector2} alt="coffee"></img>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Feedback>
 
-      <EndContent>
+      <EndContent initial={{ filter: 'grayscale(100%)' }} transition={{ duration: 2, ease: 'linear' }} animate={{ filter: 'grayscale(0%)' }}>
         <img src={endImage} alt="coffee"></img>
       </EndContent>
 

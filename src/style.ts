@@ -19,7 +19,7 @@ const Global = createGlobalStyle`
   }
 `;
 
-const Wrapper = styled(motion.div)`
+const Wrapper = styled.div`
   max-width: 1220px;
   display: flex;
   justify-content: space-between;
@@ -91,7 +91,7 @@ const BackgroundPreview = styled(motion.div)`
   }
 `;
 
-const BlockInfo = styled.div`
+const BlockInfo = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   max-width: 1220px;
@@ -116,7 +116,7 @@ const BlockInfo = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const Menu = styled(motion.div)`
   max-width: 1220px;
   margin: auto;
   padding: 5% 0;
@@ -180,7 +180,7 @@ const Menu = styled.div`
   }
 `;
 
-const Button1 = styled.button`
+const Button1 = styled(motion.button)`
   display: block;
   border: none;
   background: #f9c06a;
@@ -194,7 +194,7 @@ const Button1 = styled.button`
   margin-top: 460px;
 `;
 
-const Button2 = styled.button`
+const Button2 = styled(motion.button)`
   display: block;
   border: none;
   background: #f9c06a;
@@ -208,7 +208,7 @@ const Button2 = styled.button`
   margin-top: 270px;
 `;
 
-const Button3 = styled.button`
+const Button3 = styled(motion.button)`
   display: block;
   border: none;
   background: #f9c06a;
@@ -222,7 +222,7 @@ const Button3 = styled.button`
   margin-top: 110px;
 `;
 
-const Button4 = styled.button`
+const Button4 = styled(motion.button)`
   display: block;
   border: none;
   background: #f9c06a;
@@ -236,7 +236,7 @@ const Button4 = styled.button`
   margin-top: 620px;
 `;
 
-const Differences = styled.div`
+const Differences = styled(motion.div)`
   max-width: 1220px;
   margin: auto;
   padding: 5% 0;
@@ -297,7 +297,7 @@ const Differences = styled.div`
   }
 `;
 
-const Morning = styled.div`
+const Morning = styled(motion.div)`
   .content {
     background-image: url(${group});
     width: 100%;
@@ -344,7 +344,7 @@ const Morning = styled.div`
   }
 `;
 
-const Feedback = styled.div`
+const Feedback = styled(motion.div)`
   max-width: 1220px;
   margin: auto;
   padding: 5% 0;
@@ -438,7 +438,7 @@ const Feedback = styled.div`
   }
 `;
 
-const EndContent = styled.div`
+const EndContent = styled(motion.div)`
   img {
     width: 100%;
     position: relative;
@@ -447,7 +447,7 @@ const EndContent = styled.div`
   }
 `;
 
-const FooterContent = styled.div`
+const FooterContent = styled(motion.div)`
   background-image: url(${imgFooter});
   width: 100%;
   height: 100%;
