@@ -17,8 +17,8 @@ import vector1 from './assets/Vector1.svg';
 import vector2 from './assets/Vector2.svg';
 import endImage from './assets/endImage.svg';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
-import { easeInOut, motion } from 'framer-motion';
+import { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 const coffies = [
   {
@@ -111,20 +111,18 @@ const sliderObj = [
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const nextSlider = () => {
-    count === sliderObj.length - 1 ? setCount(0) : setCount(count + 1);
-  };
+  const nextSlider = useCallback(() => {
+    setCount(prevCount => (prevCount === sliderObj.length - 1 ? 0 : prevCount + 1));
+  }, []);
 
-  const lastSlider = () => {
-    count === 0 ? setCount(sliderObj.length - 1) : setCount(count - 1);
-  };
+  const lastSlider = () => setCount(count === 0 ? sliderObj.length - 1 : count - 1);
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlider();
     }, 3000);
     return () => clearInterval(interval);
-  }, [count]);
+  }, [nextSlider]);
 
   return (
     <>
@@ -177,8 +175,8 @@ const App = () => {
         <p>Explore all flavours of coffee with us. There is always a new cup worth experiencing.</p>
         <div className="content">
           {coffies.map((el, index) => (
-            <div className="itemFlex">
-              <div key={index} className="item">
+            <div key={index} className="itemFlex">
+              <div className="item">
                 <div>
                   <img src={el.img} alt="coffee" />
                 </div>
