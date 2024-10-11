@@ -137,7 +137,11 @@ const App = () => {
             It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our
             customers.
           </p>
-          <Button1 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+          <Button1
+            initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+            whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+            whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
+          >
             Order Now
           </Button1>
         </div>
@@ -156,7 +160,11 @@ const App = () => {
             cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you
             have ever tasted.
           </p>
-          <Button2 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+          <Button2
+            initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+            whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+            whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
+          >
             Learn More
           </Button2>
         </div>
@@ -184,7 +192,11 @@ const App = () => {
                   <h3>{el.title}</h3>
                   <p>{el.description}</p>
                   <p className="price">{el.price}</p>
-                  <Button3 whileHover={{ backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 0.9 }}>
+                  <Button3
+                    initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+                    whileHover={{ scale: 1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
+                    whileTap={{ backgroundColor: '#cd9d55', scale: 0.9, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
+                  >
                     Order Now
                   </Button3>
                 </div>
@@ -217,7 +229,11 @@ const App = () => {
         </div>
         <p className="downP">Great ideas start with great coffee, Lets help you achieve that</p>
         <h3>Get started today.</h3>
-        <Button4 whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}>
+        <Button4
+          initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+          whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+          whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
+        >
           Join Us
         </Button4>
       </Differences>
@@ -229,8 +245,9 @@ const App = () => {
               <h2>Get a chance to have an Amazing morning</h2>
               <p>We are giving you are one time opportunity to experience a better life with coffee.</p>
               <Button2
-                whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
-                whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+                initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+                whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+                whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
               >
                 Order Now
               </Button2>
@@ -261,8 +278,9 @@ const App = () => {
               <img src={stick} alt="coffe"></img>
             </div>
             <motion.div
-              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
-              whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+              initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+              whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
               className="vectorOne"
               onClick={() => nextSlider()}
             >
@@ -275,8 +293,9 @@ const App = () => {
               <img src={rectangel} alt="coffee"></img>
             </div>
             <motion.div
-              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer' }}
-              whileTap={{ backgroundColor: '#cd9d55', scale: 1 }}
+              initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+              whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+              whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
               className="vectorTwo"
               onClick={() => lastSlider()}
             >

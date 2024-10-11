@@ -19,7 +19,12 @@ const Header = () => {
           <motion.p whileHover={{ scale: 1.1, cursor: 'pointer', textDecoration: 'underline' }} whileTap={{ scale: 1 }} className="btn_signIn">
             Sign In
           </motion.p>
-          <motion.button whileHover={{ scale: 1.1, cursor: 'pointer' }} whileTap={{ backgroundColor: '#cd9d55', scale: 1 }} className="btn_active">
+          <motion.button
+            initial={{ boxShadow: '5px 5px 10px rgba(3, 4, 5, 6)' }}
+            whileHover={{ scale: 1.1, backgroundColor: ' #f9c06a', cursor: 'pointer', boxShadow: '7px 7px 12px rgba(4, 5, 6, 7)' }}
+            whileTap={{ backgroundColor: '#cd9d55', scale: 1, boxShadow: '5px 5px 10px rgba(0, 0, 0, 0)' }}
+            className="btn_active"
+          >
             Sign Up
           </motion.button>
         </div>
