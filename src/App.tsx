@@ -128,7 +128,11 @@ const App = () => {
     <>
       <Global />
 
-      <BackgroundPreview initial={{ filter: 'grayscale(100%)' }} transition={{ duration: 3, ease: 'linear' }} animate={{ filter: 'grayscale(0%)' }}>
+      <BackgroundPreview
+        initial={{ filter: 'blur(10px) grayscale(100%)' }}
+        transition={{ duration: 1, ease: 'linear' }}
+        animate={{ filter: 'blur(0px) grayscale(0%)' }}
+      >
         <Header />
         <div className="landing">
           <p>We’ve got your morning covered with</p>

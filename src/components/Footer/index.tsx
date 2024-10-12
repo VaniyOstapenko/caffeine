@@ -19,28 +19,28 @@ const Footer = () => {
             <div className="social">
               <motion.img
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
-                whileTap={{ scale: 0.9, rotate: 88 }}
+                whileTap={{ scale: 0.9, y: 2, x: 2 }}
                 className="Facebook"
                 src={Facebook}
                 alt="coffee"
               ></motion.img>
               <motion.img
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
-                whileTap={{ scale: 0.9, rotate: 100 }}
+                whileTap={{ scale: 0.9, y: 2, x: 2 }}
                 className="Instagram"
                 src={Instagram}
                 alt="coffee"
               ></motion.img>
               <motion.img
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
-                whileTap={{ scale: 0.9, rotate: 180 }}
+                whileTap={{ scale: 0.9, y: 2, x: 2 }}
                 className="Youtube"
                 src={Youtube}
                 alt="coffee"
               ></motion.img>
               <motion.img
                 whileHover={{ scale: 1.1, filter: 'drop-shadow(5px 5px 5px black)', cursor: 'pointer' }}
-                whileTap={{ scale: 0.9, rotate: 360 }}
+                whileTap={{ scale: 0.9, y: 2, x: 2 }}
                 className="Twitter"
                 src={Twitter}
                 alt="coffee"
